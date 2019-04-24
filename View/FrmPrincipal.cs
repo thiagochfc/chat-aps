@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace chat_aps.View
@@ -15,6 +8,18 @@ namespace chat_aps.View
         public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void BtnEntrar_Click(object sender, EventArgs e)
+        {
+            new FrmChat().Show();
+            Hide();
+        }
+
+        private void BtnCriar_Click(object sender, EventArgs e)
+        {
+            new FrmSala().Show();
+            Hide();
         }
     }
 }
