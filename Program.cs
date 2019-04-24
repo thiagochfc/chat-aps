@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using chat_aps.View;
 
 namespace chat_aps
 {
@@ -13,7 +14,7 @@ namespace chat_aps
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
+            Application.Run(new FrmPrincipal());
         }
     }
 }
