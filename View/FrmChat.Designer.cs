@@ -31,6 +31,10 @@
             this.LblTitulo = new System.Windows.Forms.Label();
             this.PnlPrincipal = new System.Windows.Forms.Panel();
             this.PnlConteudo = new System.Windows.Forms.Panel();
+            this.SpcConteudo = new System.Windows.Forms.SplitContainer();
+            this.BtnEnviar = new System.Windows.Forms.Button();
+            this.TxtMensagem = new System.Windows.Forms.TextBox();
+            this.TxtLog = new System.Windows.Forms.TextBox();
             this.PnlLogin = new System.Windows.Forms.Panel();
             this.BtnSair = new System.Windows.Forms.Button();
             this.BtnEntrar = new System.Windows.Forms.Button();
@@ -38,16 +42,12 @@
             this.LblIP = new System.Windows.Forms.Label();
             this.TxtUsuário = new System.Windows.Forms.TextBox();
             this.LblUsuario = new System.Windows.Forms.Label();
-            this.SpcConteudo = new System.Windows.Forms.SplitContainer();
-            this.TxtLog = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.PnlPrincipal.SuspendLayout();
             this.PnlConteudo.SuspendLayout();
-            this.PnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpcConteudo)).BeginInit();
             this.SpcConteudo.Panel1.SuspendLayout();
             this.SpcConteudo.SuspendLayout();
+            this.PnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblTitulo
@@ -64,6 +64,7 @@
             // 
             // PnlPrincipal
             // 
+            this.PnlPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.PnlPrincipal.Controls.Add(this.PnlConteudo);
             this.PnlPrincipal.Controls.Add(this.PnlLogin);
             this.PnlPrincipal.Location = new System.Drawing.Point(13, 132);
@@ -78,6 +79,65 @@
             this.PnlConteudo.Name = "PnlConteudo";
             this.PnlConteudo.Size = new System.Drawing.Size(852, 462);
             this.PnlConteudo.TabIndex = 1;
+            // 
+            // SpcConteudo
+            // 
+            this.SpcConteudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.SpcConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SpcConteudo.IsSplitterFixed = true;
+            this.SpcConteudo.Location = new System.Drawing.Point(0, 0);
+            this.SpcConteudo.Name = "SpcConteudo";
+            // 
+            // SpcConteudo.Panel1
+            // 
+            this.SpcConteudo.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.SpcConteudo.Panel1.Controls.Add(this.BtnEnviar);
+            this.SpcConteudo.Panel1.Controls.Add(this.TxtMensagem);
+            this.SpcConteudo.Panel1.Controls.Add(this.TxtLog);
+            // 
+            // SpcConteudo.Panel2
+            // 
+            this.SpcConteudo.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.SpcConteudo.Size = new System.Drawing.Size(852, 462);
+            this.SpcConteudo.SplitterDistance = 609;
+            this.SpcConteudo.TabIndex = 0;
+            // 
+            // BtnEnviar
+            // 
+            this.BtnEnviar.BackColor = System.Drawing.Color.SlateGray;
+            this.BtnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.BtnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEnviar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEnviar.ForeColor = System.Drawing.Color.White;
+            this.BtnEnviar.Location = new System.Drawing.Point(511, 429);
+            this.BtnEnviar.Name = "BtnEnviar";
+            this.BtnEnviar.Size = new System.Drawing.Size(97, 30);
+            this.BtnEnviar.TabIndex = 2;
+            this.BtnEnviar.Text = "Enviar";
+            this.BtnEnviar.UseVisualStyleBackColor = false;
+            // 
+            // TxtMensagem
+            // 
+            this.TxtMensagem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMensagem.Location = new System.Drawing.Point(-1, 429);
+            this.TxtMensagem.MaxLength = 500;
+            this.TxtMensagem.Multiline = true;
+            this.TxtMensagem.Name = "TxtMensagem";
+            this.TxtMensagem.Size = new System.Drawing.Size(506, 30);
+            this.TxtMensagem.TabIndex = 1;
+            this.TxtMensagem.WordWrap = false;
+            // 
+            // TxtLog
+            // 
+            this.TxtLog.BackColor = System.Drawing.Color.White;
+            this.TxtLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLog.Location = new System.Drawing.Point(0, 0);
+            this.TxtLog.Multiline = true;
+            this.TxtLog.Name = "TxtLog";
+            this.TxtLog.ReadOnly = true;
+            this.TxtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TxtLog.Size = new System.Drawing.Size(608, 423);
+            this.TxtLog.TabIndex = 0;
             // 
             // PnlLogin
             // 
@@ -158,65 +218,6 @@
             this.LblUsuario.TabIndex = 0;
             this.LblUsuario.Text = "Nome de usuário";
             // 
-            // SpcConteudo
-            // 
-            this.SpcConteudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.SpcConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SpcConteudo.IsSplitterFixed = true;
-            this.SpcConteudo.Location = new System.Drawing.Point(0, 0);
-            this.SpcConteudo.Name = "SpcConteudo";
-            // 
-            // SpcConteudo.Panel1
-            // 
-            this.SpcConteudo.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.SpcConteudo.Panel1.Controls.Add(this.button1);
-            this.SpcConteudo.Panel1.Controls.Add(this.textBox1);
-            this.SpcConteudo.Panel1.Controls.Add(this.TxtLog);
-            // 
-            // SpcConteudo.Panel2
-            // 
-            this.SpcConteudo.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.SpcConteudo.Size = new System.Drawing.Size(852, 462);
-            this.SpcConteudo.SplitterDistance = 609;
-            this.SpcConteudo.TabIndex = 0;
-            // 
-            // TxtLog
-            // 
-            this.TxtLog.BackColor = System.Drawing.Color.White;
-            this.TxtLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLog.Location = new System.Drawing.Point(0, 0);
-            this.TxtLog.Multiline = true;
-            this.TxtLog.Name = "TxtLog";
-            this.TxtLog.ReadOnly = true;
-            this.TxtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtLog.Size = new System.Drawing.Size(608, 423);
-            this.TxtLog.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(-1, 429);
-            this.textBox1.MaxLength = 500;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(506, 30);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.WordWrap = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SlateGray;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(511, 429);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 30);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Enviar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // FrmChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,12 +233,12 @@
             this.Text = "C\\ - Chat";
             this.PnlPrincipal.ResumeLayout(false);
             this.PnlConteudo.ResumeLayout(false);
-            this.PnlLogin.ResumeLayout(false);
-            this.PnlLogin.PerformLayout();
             this.SpcConteudo.Panel1.ResumeLayout(false);
             this.SpcConteudo.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpcConteudo)).EndInit();
             this.SpcConteudo.ResumeLayout(false);
+            this.PnlLogin.ResumeLayout(false);
+            this.PnlLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,7 +257,7 @@
         private System.Windows.Forms.Panel PnlConteudo;
         private System.Windows.Forms.SplitContainer SpcConteudo;
         private System.Windows.Forms.TextBox TxtLog;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BtnEnviar;
+        private System.Windows.Forms.TextBox TxtMensagem;
     }
 }

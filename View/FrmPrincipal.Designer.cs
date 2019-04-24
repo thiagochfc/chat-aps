@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.PnlFundo = new System.Windows.Forms.Panel();
-            this.LblTitulo = new System.Windows.Forms.Label();
-            this.LblBoasVindas = new System.Windows.Forms.Label();
-            this.LblOpcoes = new System.Windows.Forms.Label();
-            this.BtnEntrar = new System.Windows.Forms.Button();
             this.BtnCriar = new System.Windows.Forms.Button();
+            this.BtnEntrar = new System.Windows.Forms.Button();
+            this.LblOpcoes = new System.Windows.Forms.Label();
+            this.LblBoasVindas = new System.Windows.Forms.Label();
+            this.LblTitulo = new System.Windows.Forms.Label();
             this.PnlFundo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,37 +51,20 @@
             this.PnlFundo.Size = new System.Drawing.Size(560, 264);
             this.PnlFundo.TabIndex = 0;
             // 
-            // LblTitulo
+            // BtnCriar
             // 
-            this.LblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblTitulo.Font = new System.Drawing.Font("Showcard Gothic", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblTitulo.Location = new System.Drawing.Point(12, 9);
-            this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(560, 119);
-            this.LblTitulo.TabIndex = 1;
-            this.LblTitulo.Text = "C\\ Chat";
-            this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblBoasVindas
-            // 
-            this.LblBoasVindas.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBoasVindas.Location = new System.Drawing.Point(-1, 26);
-            this.LblBoasVindas.Name = "LblBoasVindas";
-            this.LblBoasVindas.Size = new System.Drawing.Size(556, 35);
-            this.LblBoasVindas.TabIndex = 0;
-            this.LblBoasVindas.Text = "Olá, seja bem-vindo!";
-            this.LblBoasVindas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblOpcoes
-            // 
-            this.LblOpcoes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblOpcoes.Location = new System.Drawing.Point(-1, 85);
-            this.LblOpcoes.Name = "LblOpcoes";
-            this.LblOpcoes.Size = new System.Drawing.Size(556, 23);
-            this.LblOpcoes.TabIndex = 1;
-            this.LblOpcoes.Text = "Você deseja criar uma sala ou entrar em uma sala?";
-            this.LblOpcoes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnCriar.BackColor = System.Drawing.Color.Brown;
+            this.BtnCriar.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
+            this.BtnCriar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCriar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCriar.ForeColor = System.Drawing.Color.White;
+            this.BtnCriar.Location = new System.Drawing.Point(112, 197);
+            this.BtnCriar.Name = "BtnCriar";
+            this.BtnCriar.Size = new System.Drawing.Size(331, 40);
+            this.BtnCriar.TabIndex = 3;
+            this.BtnCriar.Text = "Criar um novo chat";
+            this.BtnCriar.UseVisualStyleBackColor = false;
+            this.BtnCriar.Click += new System.EventHandler(this.BtnCriar_Click);
             // 
             // BtnEntrar
             // 
@@ -97,20 +80,39 @@
             this.BtnEntrar.TabIndex = 2;
             this.BtnEntrar.Text = "Entrar em um chat";
             this.BtnEntrar.UseVisualStyleBackColor = false;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
-            // BtnCriar
+            // LblOpcoes
             // 
-            this.BtnCriar.BackColor = System.Drawing.Color.Brown;
-            this.BtnCriar.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
-            this.BtnCriar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCriar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCriar.ForeColor = System.Drawing.Color.White;
-            this.BtnCriar.Location = new System.Drawing.Point(112, 197);
-            this.BtnCriar.Name = "BtnCriar";
-            this.BtnCriar.Size = new System.Drawing.Size(331, 40);
-            this.BtnCriar.TabIndex = 3;
-            this.BtnCriar.Text = "Criar um novo chat";
-            this.BtnCriar.UseVisualStyleBackColor = false;
+            this.LblOpcoes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblOpcoes.Location = new System.Drawing.Point(-1, 85);
+            this.LblOpcoes.Name = "LblOpcoes";
+            this.LblOpcoes.Size = new System.Drawing.Size(556, 23);
+            this.LblOpcoes.TabIndex = 1;
+            this.LblOpcoes.Text = "Você deseja criar uma sala ou entrar em uma sala?";
+            this.LblOpcoes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblBoasVindas
+            // 
+            this.LblBoasVindas.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBoasVindas.Location = new System.Drawing.Point(-1, 26);
+            this.LblBoasVindas.Name = "LblBoasVindas";
+            this.LblBoasVindas.Size = new System.Drawing.Size(556, 35);
+            this.LblBoasVindas.TabIndex = 0;
+            this.LblBoasVindas.Text = "Olá, seja bem-vindo!";
+            this.LblBoasVindas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblTitulo
+            // 
+            this.LblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LblTitulo.Font = new System.Drawing.Font("Showcard Gothic", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Size = new System.Drawing.Size(560, 119);
+            this.LblTitulo.TabIndex = 1;
+            this.LblTitulo.Text = "C\\ Chat";
+            this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmPrincipal
             // 
