@@ -49,22 +49,22 @@
             // LblTitulo
             // 
             this.LblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblTitulo.Font = new System.Drawing.Font("Showcard Gothic", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.Font = new System.Drawing.Font("Roboto", 56.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblTitulo.Location = new System.Drawing.Point(12, 101);
+            this.LblTitulo.Location = new System.Drawing.Point(13, 86);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(509, 119);
+            this.LblTitulo.Size = new System.Drawing.Size(509, 92);
             this.LblTitulo.TabIndex = 3;
             this.LblTitulo.Text = "C\\ Chat";
             this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblSala
             // 
-            this.LblSala.Font = new System.Drawing.Font("Showcard Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSala.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSala.ForeColor = System.Drawing.Color.Brown;
-            this.LblSala.Location = new System.Drawing.Point(12, 9);
+            this.LblSala.Location = new System.Drawing.Point(11, 29);
             this.LblSala.Name = "LblSala";
-            this.LblSala.Size = new System.Drawing.Size(510, 92);
+            this.LblSala.Size = new System.Drawing.Size(510, 57);
             this.LblSala.TabIndex = 4;
             this.LblSala.Text = "Sala";
             this.LblSala.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,7 +81,7 @@
             this.PnlConexao.Controls.Add(this.textBox1);
             this.PnlConexao.Controls.Add(this.LblIP);
             this.PnlConexao.Controls.Add(this.LblUsuario);
-            this.PnlConexao.Location = new System.Drawing.Point(13, 243);
+            this.PnlConexao.Location = new System.Drawing.Point(12, 181);
             this.PnlConexao.Name = "PnlConexao";
             this.PnlConexao.Size = new System.Drawing.Size(509, 278);
             this.PnlConexao.TabIndex = 5;
@@ -216,7 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(534, 533);
+            this.ClientSize = new System.Drawing.Size(534, 471);
             this.Controls.Add(this.PnlConexao);
             this.Controls.Add(this.LblSala);
             this.Controls.Add(this.LblTitulo);

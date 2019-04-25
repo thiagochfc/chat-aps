@@ -46,7 +46,7 @@
             this.PnlFundo.Controls.Add(this.BtnEntrar);
             this.PnlFundo.Controls.Add(this.LblOpcoes);
             this.PnlFundo.Controls.Add(this.LblBoasVindas);
-            this.PnlFundo.Location = new System.Drawing.Point(12, 131);
+            this.PnlFundo.Location = new System.Drawing.Point(12, 104);
             this.PnlFundo.Name = "PnlFundo";
             this.PnlFundo.Size = new System.Drawing.Size(560, 264);
             this.PnlFundo.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.BtnCriar.Name = "BtnCriar";
             this.BtnCriar.Size = new System.Drawing.Size(331, 40);
             this.BtnCriar.TabIndex = 3;
-            this.BtnCriar.Text = "Criar um novo chat";
+            this.BtnCriar.Text = "Criar uma nova sala";
             this.BtnCriar.UseVisualStyleBackColor = false;
             this.BtnCriar.Click += new System.EventHandler(this.BtnCriar_Click);
             // 
@@ -78,7 +78,7 @@
             this.BtnEntrar.Name = "BtnEntrar";
             this.BtnEntrar.Size = new System.Drawing.Size(331, 40);
             this.BtnEntrar.TabIndex = 2;
-            this.BtnEntrar.Text = "Entrar em um chat";
+            this.BtnEntrar.Text = "Entrar em um sala";
             this.BtnEntrar.UseVisualStyleBackColor = false;
             this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
@@ -105,11 +105,11 @@
             // LblTitulo
             // 
             this.LblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblTitulo.Font = new System.Drawing.Font("Showcard Gothic", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.Font = new System.Drawing.Font("Roboto", 56.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.LblTitulo.Location = new System.Drawing.Point(12, 5);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(560, 119);
+            this.LblTitulo.Size = new System.Drawing.Size(560, 96);
             this.LblTitulo.TabIndex = 1;
             this.LblTitulo.Text = "C\\ Chat";
             this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(584, 407);
+            this.ClientSize = new System.Drawing.Size(584, 380);
             this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.PnlFundo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

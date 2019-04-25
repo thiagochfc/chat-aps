@@ -40,7 +40,7 @@
             this.BtnEntrar = new System.Windows.Forms.Button();
             this.TxtIP = new System.Windows.Forms.TextBox();
             this.LblIP = new System.Windows.Forms.Label();
-            this.TxtUsuário = new System.Windows.Forms.TextBox();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.LblUsuario = new System.Windows.Forms.Label();
             this.PnlPrincipal.SuspendLayout();
             this.PnlConteudo.SuspendLayout();
@@ -53,11 +53,11 @@
             // LblTitulo
             // 
             this.LblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblTitulo.Font = new System.Drawing.Font("Showcard Gothic", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.Font = new System.Drawing.Font("Roboto", 56.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.LblTitulo.Location = new System.Drawing.Point(9, 9);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(860, 119);
+            this.LblTitulo.Size = new System.Drawing.Size(860, 90);
             this.LblTitulo.TabIndex = 2;
             this.LblTitulo.Text = "C\\ Chat";
             this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,7 +67,7 @@
             this.PnlPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.PnlPrincipal.Controls.Add(this.PnlConteudo);
             this.PnlPrincipal.Controls.Add(this.PnlLogin);
-            this.PnlPrincipal.Location = new System.Drawing.Point(13, 132);
+            this.PnlPrincipal.Location = new System.Drawing.Point(13, 102);
             this.PnlPrincipal.Name = "PnlPrincipal";
             this.PnlPrincipal.Size = new System.Drawing.Size(859, 617);
             this.PnlPrincipal.TabIndex = 3;
@@ -146,7 +146,7 @@
             this.PnlLogin.Controls.Add(this.BtnEntrar);
             this.PnlLogin.Controls.Add(this.TxtIP);
             this.PnlLogin.Controls.Add(this.LblIP);
-            this.PnlLogin.Controls.Add(this.TxtUsuário);
+            this.PnlLogin.Controls.Add(this.TxtUsuario);
             this.PnlLogin.Controls.Add(this.LblUsuario);
             this.PnlLogin.Location = new System.Drawing.Point(4, 4);
             this.PnlLogin.Name = "PnlLogin";
@@ -199,14 +199,14 @@
             this.LblIP.TabIndex = 2;
             this.LblIP.Text = "IP da sala";
             // 
-            // TxtUsuário
+            // TxtUsuario
             // 
-            this.TxtUsuário.BackColor = System.Drawing.Color.White;
-            this.TxtUsuário.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuário.Location = new System.Drawing.Point(15, 34);
-            this.TxtUsuário.Name = "TxtUsuário";
-            this.TxtUsuário.Size = new System.Drawing.Size(411, 27);
-            this.TxtUsuário.TabIndex = 0;
+            this.TxtUsuario.BackColor = System.Drawing.Color.White;
+            this.TxtUsuario.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Location = new System.Drawing.Point(15, 34);
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(411, 27);
+            this.TxtUsuario.TabIndex = 0;
             // 
             // LblUsuario
             // 
@@ -223,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(884, 761);
+            this.ClientSize = new System.Drawing.Size(884, 726);
             this.Controls.Add(this.PnlPrincipal);
             this.Controls.Add(this.LblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -250,7 +250,7 @@
         private System.Windows.Forms.Panel PnlLogin;
         private System.Windows.Forms.TextBox TxtIP;
         private System.Windows.Forms.Label LblIP;
-        private System.Windows.Forms.TextBox TxtUsuário;
+        private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Button BtnSair;
         private System.Windows.Forms.Button BtnEntrar;
