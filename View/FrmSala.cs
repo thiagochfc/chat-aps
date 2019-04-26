@@ -25,6 +25,11 @@ namespace chat_aps.View
 
         private void BtnIniciar_Click(object sender, System.EventArgs e)
         {
+            if(TxtUsuario.Text.Trim().Equals(string.Empty) || TxtIP.Text.Trim().Equals(string.Empty))
+            {
+                MessageBox.Show("Informações inválidas!");
+                return;
+            }
             try
             {
                 // Analisa o endereço IP do servidor informado no textbox

@@ -22,7 +22,12 @@ namespace chat_aps.View
         }
 
         private void BtnEntrar_Click(object sender, System.EventArgs e)
-        {   
+        {
+            if (TxtUsuario.Text.Trim().Equals(string.Empty) || TxtIP.Text.Trim().Equals(string.Empty))
+            {
+                MessageBox.Show("Informações inválidas!");
+                return;
+            }
             Cliente.InicializaConexao();
             ComponentesQuandoIniciado();
             AjusteNaInformacao();
