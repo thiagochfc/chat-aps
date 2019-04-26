@@ -38,8 +38,8 @@
             this.BtnIniciar = new System.Windows.Forms.Button();
             this.RbtIPManual = new System.Windows.Forms.RadioButton();
             this.RbtIPAutomatico = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtIP = new System.Windows.Forms.TextBox();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.LblIP = new System.Windows.Forms.Label();
             this.LblUsuario = new System.Windows.Forms.Label();
             this.PnlConexao.SuspendLayout();
@@ -77,8 +77,8 @@
             this.PnlConexao.Controls.Add(this.BtnIniciar);
             this.PnlConexao.Controls.Add(this.RbtIPManual);
             this.PnlConexao.Controls.Add(this.RbtIPAutomatico);
-            this.PnlConexao.Controls.Add(this.textBox2);
-            this.PnlConexao.Controls.Add(this.textBox1);
+            this.PnlConexao.Controls.Add(this.TxtIP);
+            this.PnlConexao.Controls.Add(this.TxtUsuario);
             this.PnlConexao.Controls.Add(this.LblIP);
             this.PnlConexao.Controls.Add(this.LblUsuario);
             this.PnlConexao.Location = new System.Drawing.Point(12, 181);
@@ -146,6 +146,7 @@
             this.BtnIniciar.TabIndex = 4;
             this.BtnIniciar.Text = "Iniciar";
             this.BtnIniciar.UseVisualStyleBackColor = false;
+            this.BtnIniciar.Click += new System.EventHandler(this.BtnIniciar_Click);
             // 
             // RbtIPManual
             // 
@@ -159,6 +160,7 @@
             this.RbtIPManual.TabStop = true;
             this.RbtIPManual.Text = "IP Manual";
             this.RbtIPManual.UseVisualStyleBackColor = true;
+            this.RbtIPManual.CheckedChanged += new System.EventHandler(this.RbtIPManual_CheckedChanged);
             // 
             // RbtIPAutomatico
             // 
@@ -172,22 +174,23 @@
             this.RbtIPAutomatico.TabStop = true;
             this.RbtIPAutomatico.Text = "IP Automático";
             this.RbtIPAutomatico.UseVisualStyleBackColor = true;
+            this.RbtIPAutomatico.CheckedChanged += new System.EventHandler(this.RbtIPAutomatico_CheckedChanged);
             // 
-            // textBox2
+            // TxtIP
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(23, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(460, 27);
-            this.textBox2.TabIndex = 1;
+            this.TxtIP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIP.Location = new System.Drawing.Point(23, 92);
+            this.TxtIP.Name = "TxtIP";
+            this.TxtIP.Size = new System.Drawing.Size(460, 27);
+            this.TxtIP.TabIndex = 1;
             // 
-            // textBox1
+            // TxtUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(23, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(460, 27);
-            this.textBox1.TabIndex = 0;
+            this.TxtUsuario.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Location = new System.Drawing.Point(23, 27);
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(460, 27);
+            this.TxtUsuario.TabIndex = 0;
             // 
             // LblIP
             // 
@@ -220,9 +223,11 @@
             this.Controls.Add(this.PnlConexao);
             this.Controls.Add(this.LblSala);
             this.Controls.Add(this.LblTitulo);
+            this.MaximizeBox = false;
             this.Name = "FrmSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C\\ - Sala";
+            this.Load += new System.EventHandler(this.FrmSala_Load);
             this.PnlConexao.ResumeLayout(false);
             this.PnlConexao.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -245,7 +250,7 @@
         private System.Windows.Forms.Button BtnIniciar;
         private System.Windows.Forms.RadioButton RbtIPManual;
         private System.Windows.Forms.RadioButton RbtIPAutomatico;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtIP;
+        private System.Windows.Forms.TextBox TxtUsuario;
     }
 }

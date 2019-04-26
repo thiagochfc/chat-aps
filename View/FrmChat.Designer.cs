@@ -115,6 +115,7 @@
             this.BtnEnviar.TabIndex = 2;
             this.BtnEnviar.Text = "Enviar";
             this.BtnEnviar.UseVisualStyleBackColor = false;
+            this.BtnEnviar.Click += new System.EventHandler(this.BtnEnviar_Click);
             // 
             // TxtMensagem
             // 
@@ -126,6 +127,7 @@
             this.TxtMensagem.Size = new System.Drawing.Size(506, 30);
             this.TxtMensagem.TabIndex = 1;
             this.TxtMensagem.WordWrap = false;
+            this.TxtMensagem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMensagem_KeyPress);
             // 
             // TxtLog
             // 
@@ -166,6 +168,7 @@
             this.BtnSair.TabIndex = 3;
             this.BtnSair.Text = "Sair";
             this.BtnSair.UseVisualStyleBackColor = false;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // BtnEntrar
             // 
@@ -180,6 +183,7 @@
             this.BtnEntrar.TabIndex = 2;
             this.BtnEntrar.Text = "Entrar";
             this.BtnEntrar.UseVisualStyleBackColor = false;
+            this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // TxtIP
             // 
@@ -231,6 +235,7 @@
             this.Name = "FrmChat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C\\ - Chat";
+            this.Load += new System.EventHandler(this.FrmChat_Load);
             this.PnlPrincipal.ResumeLayout(false);
             this.PnlConteudo.ResumeLayout(false);
             this.SpcConteudo.Panel1.ResumeLayout(false);
