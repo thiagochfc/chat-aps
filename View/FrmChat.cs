@@ -25,6 +25,7 @@ namespace chat_aps.View
         {   
             Cliente.InicializaConexao();
             ComponentesQuandoIniciado();
+            AjusteNaInformacao();
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
@@ -70,8 +71,14 @@ namespace chat_aps.View
         {
             TxtUsuario.Text = txtUsuario;
             TxtIP.Text = txtIP;
-            Cliente.InicializaConexao();
+            BtnEntrar_Click(this, new EventArgs());
             ComponentesQuandoIniciado();
+        }
+
+        private void AjusteNaInformacao()
+        {
+            LblMeuIPMsg.Text = MeuIP.IPv4().ToString();
+            LblIPSalaMsg.Text = TxtIP.Text;
         }
     }
 }

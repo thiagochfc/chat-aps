@@ -35,6 +35,14 @@
             this.BtnEnviar = new System.Windows.Forms.Button();
             this.TxtMensagem = new System.Windows.Forms.TextBox();
             this.TxtLog = new System.Windows.Forms.TextBox();
+            this.SpcInformacao = new System.Windows.Forms.SplitContainer();
+            this.LblVersaoMsg = new System.Windows.Forms.Label();
+            this.LblVersao = new System.Windows.Forms.Label();
+            this.LblIPSalaMsg = new System.Windows.Forms.Label();
+            this.LblIPSala = new System.Windows.Forms.Label();
+            this.LblMeuIPMsg = new System.Windows.Forms.Label();
+            this.LblMeuIP = new System.Windows.Forms.Label();
+            this.LblInformacoes = new System.Windows.Forms.Label();
             this.PnlLogin = new System.Windows.Forms.Panel();
             this.BtnSair = new System.Windows.Forms.Button();
             this.BtnEntrar = new System.Windows.Forms.Button();
@@ -46,7 +54,11 @@
             this.PnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpcConteudo)).BeginInit();
             this.SpcConteudo.Panel1.SuspendLayout();
+            this.SpcConteudo.Panel2.SuspendLayout();
             this.SpcConteudo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SpcInformacao)).BeginInit();
+            this.SpcInformacao.Panel2.SuspendLayout();
+            this.SpcInformacao.SuspendLayout();
             this.PnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +110,7 @@
             // SpcConteudo.Panel2
             // 
             this.SpcConteudo.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.SpcConteudo.Panel2.Controls.Add(this.SpcInformacao);
             this.SpcConteudo.Size = new System.Drawing.Size(852, 462);
             this.SpcConteudo.SplitterDistance = 609;
             this.SpcConteudo.TabIndex = 0;
@@ -140,6 +153,103 @@
             this.TxtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtLog.Size = new System.Drawing.Size(608, 423);
             this.TxtLog.TabIndex = 0;
+            // 
+            // SpcInformacao
+            // 
+            this.SpcInformacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SpcInformacao.IsSplitterFixed = true;
+            this.SpcInformacao.Location = new System.Drawing.Point(0, 0);
+            this.SpcInformacao.Name = "SpcInformacao";
+            this.SpcInformacao.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // SpcInformacao.Panel2
+            // 
+            this.SpcInformacao.Panel2.Controls.Add(this.LblVersaoMsg);
+            this.SpcInformacao.Panel2.Controls.Add(this.LblVersao);
+            this.SpcInformacao.Panel2.Controls.Add(this.LblIPSalaMsg);
+            this.SpcInformacao.Panel2.Controls.Add(this.LblIPSala);
+            this.SpcInformacao.Panel2.Controls.Add(this.LblMeuIPMsg);
+            this.SpcInformacao.Panel2.Controls.Add(this.LblMeuIP);
+            this.SpcInformacao.Panel2.Controls.Add(this.LblInformacoes);
+            this.SpcInformacao.Size = new System.Drawing.Size(239, 462);
+            this.SpcInformacao.SplitterDistance = 260;
+            this.SpcInformacao.TabIndex = 0;
+            // 
+            // LblVersaoMsg
+            // 
+            this.LblVersaoMsg.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblVersaoMsg.ForeColor = System.Drawing.Color.White;
+            this.LblVersaoMsg.Location = new System.Drawing.Point(124, 169);
+            this.LblVersaoMsg.Name = "LblVersaoMsg";
+            this.LblVersaoMsg.Size = new System.Drawing.Size(112, 19);
+            this.LblVersaoMsg.TabIndex = 6;
+            this.LblVersaoMsg.Text = "1.0.0";
+            // 
+            // LblVersao
+            // 
+            this.LblVersao.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblVersao.ForeColor = System.Drawing.Color.White;
+            this.LblVersao.Location = new System.Drawing.Point(7, 169);
+            this.LblVersao.Name = "LblVersao";
+            this.LblVersao.Size = new System.Drawing.Size(112, 19);
+            this.LblVersao.TabIndex = 5;
+            this.LblVersao.Text = "Versão:";
+            this.LblVersao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // LblIPSalaMsg
+            // 
+            this.LblIPSalaMsg.AutoSize = true;
+            this.LblIPSalaMsg.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIPSalaMsg.ForeColor = System.Drawing.Color.White;
+            this.LblIPSalaMsg.Location = new System.Drawing.Point(8, 129);
+            this.LblIPSalaMsg.Name = "LblIPSalaMsg";
+            this.LblIPSalaMsg.Size = new System.Drawing.Size(53, 19);
+            this.LblIPSalaMsg.TabIndex = 4;
+            this.LblIPSalaMsg.Text = "0.0.0.0";
+            // 
+            // LblIPSala
+            // 
+            this.LblIPSala.AutoSize = true;
+            this.LblIPSala.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIPSala.ForeColor = System.Drawing.Color.White;
+            this.LblIPSala.Location = new System.Drawing.Point(7, 105);
+            this.LblIPSala.Name = "LblIPSala";
+            this.LblIPSala.Size = new System.Drawing.Size(72, 19);
+            this.LblIPSala.TabIndex = 3;
+            this.LblIPSala.Text = "IP da Sala";
+            // 
+            // LblMeuIPMsg
+            // 
+            this.LblMeuIPMsg.AutoSize = true;
+            this.LblMeuIPMsg.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMeuIPMsg.ForeColor = System.Drawing.Color.White;
+            this.LblMeuIPMsg.Location = new System.Drawing.Point(7, 72);
+            this.LblMeuIPMsg.Name = "LblMeuIPMsg";
+            this.LblMeuIPMsg.Size = new System.Drawing.Size(53, 19);
+            this.LblMeuIPMsg.TabIndex = 2;
+            this.LblMeuIPMsg.Text = "0.0.0.0";
+            // 
+            // LblMeuIP
+            // 
+            this.LblMeuIP.AutoSize = true;
+            this.LblMeuIP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMeuIP.ForeColor = System.Drawing.Color.White;
+            this.LblMeuIP.Location = new System.Drawing.Point(7, 48);
+            this.LblMeuIP.Name = "LblMeuIP";
+            this.LblMeuIP.Size = new System.Drawing.Size(54, 19);
+            this.LblMeuIP.TabIndex = 1;
+            this.LblMeuIP.Text = "Meu IP";
+            // 
+            // LblInformacoes
+            // 
+            this.LblInformacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblInformacoes.ForeColor = System.Drawing.Color.White;
+            this.LblInformacoes.Location = new System.Drawing.Point(3, 0);
+            this.LblInformacoes.Name = "LblInformacoes";
+            this.LblInformacoes.Size = new System.Drawing.Size(233, 23);
+            this.LblInformacoes.TabIndex = 0;
+            this.LblInformacoes.Text = "Informações";
+            this.LblInformacoes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PnlLogin
             // 
@@ -240,8 +350,13 @@
             this.PnlConteudo.ResumeLayout(false);
             this.SpcConteudo.Panel1.ResumeLayout(false);
             this.SpcConteudo.Panel1.PerformLayout();
+            this.SpcConteudo.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SpcConteudo)).EndInit();
             this.SpcConteudo.ResumeLayout(false);
+            this.SpcInformacao.Panel2.ResumeLayout(false);
+            this.SpcInformacao.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SpcInformacao)).EndInit();
+            this.SpcInformacao.ResumeLayout(false);
             this.PnlLogin.ResumeLayout(false);
             this.PnlLogin.PerformLayout();
             this.ResumeLayout(false);
@@ -264,5 +379,13 @@
         private System.Windows.Forms.TextBox TxtLog;
         private System.Windows.Forms.Button BtnEnviar;
         private System.Windows.Forms.TextBox TxtMensagem;
+        private System.Windows.Forms.SplitContainer SpcInformacao;
+        private System.Windows.Forms.Label LblVersaoMsg;
+        private System.Windows.Forms.Label LblVersao;
+        private System.Windows.Forms.Label LblIPSalaMsg;
+        private System.Windows.Forms.Label LblIPSala;
+        private System.Windows.Forms.Label LblMeuIPMsg;
+        private System.Windows.Forms.Label LblMeuIP;
+        private System.Windows.Forms.Label LblInformacoes;
     }
 }
