@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Conexao.cs" />
+    <Compile Include="Model\MeuIP.cs" />
+    <Compile Include="Model\Servidor.cs" />
+    <Compile Include="Model\StatusChangedEventArgs.cs" />
+    <Compile Include="Model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\FrmChat.cs">
