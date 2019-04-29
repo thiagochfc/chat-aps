@@ -84,27 +84,27 @@ namespace chat_aps.Model
             OnStatusChanged(e);
 
             // Cria um array de clientes TCPs do tamanho do numero de clientes existentes
-            TcpClient[] tcpClientes = new TcpClient[HtUsuarios.Count];
+            TcpClient[] TcpClientes = new TcpClient[HtUsuarios.Count];
             // Copia os objetos TcpClient no array
-            HtUsuarios.Values.CopyTo(tcpClientes, 0);
+            HtUsuarios.Values.CopyTo(TcpClientes, 0);
             // Percorre a lista de clientes TCP
-            for (int i = 0; i < tcpClientes.Length; i++)
+            for (int i = 0; i < TcpClientes.Length; i++)
             {
                 // Tenta enviar uma mensagem para cada cliente
                 try
                 {
                     // Se a mensagem estiver em branco ou a conexão for nula sai...
-                    if (Mensagem.Trim() == "" || tcpClientes[i] == null)
+                    if (Mensagem.Trim() == "" || TcpClientes[i] == null)
                         continue;
                     // Envia a mensagem para o usuário atual no laço
-                    SwSenderSender = new StreamWriter(tcpClientes[i].GetStream());
+                    SwSenderSender = new StreamWriter(TcpClientes[i].GetStream());
                     SwSenderSender.WriteLine(Mensagem);
                     SwSenderSender.Flush();
                     SwSenderSender = null;
                 }
                 catch // Se houver um problema , o usuário não existe , então remove-o
                 {
-                    RemoveUsuario(tcpClientes[i]);
+                    RemoveUsuario(TcpClientes[i]);
                 }
             }
         }
@@ -112,7 +112,7 @@ namespace chat_aps.Model
         // Envia mensagens de um usuário para todos os outros
         public static void EnviaMensagem(string Origem, string Mensagem)
         {
-            StreamWriter swSenderSender;
+            StreamWriter SwSenderSender;
 
             // Primeiro exibe a mensagem na aplicação
             e = new StatusChangedEventArgs(Origem + " disse : " + Mensagem);
@@ -133,10 +133,10 @@ namespace chat_aps.Model
                         continue;
 
                     // Envia a mensagem para o usuário atual no laço
-                    swSenderSender = new StreamWriter(TcpClientes[i].GetStream());
-                    swSenderSender.WriteLine(Origem + " disse: " + Mensagem);
-                    swSenderSender.Flush();
-                    swSenderSender = null;
+                    SwSenderSender = new StreamWriter(TcpClientes[i].GetStream());
+                    SwSenderSender.WriteLine(Origem + " disse: " + Mensagem);
+                    SwSenderSender.Flush();
+                    SwSenderSender = null;
                 }
                 catch // Se houver um problema , o usuário não existe , então remove-o
                 {
@@ -151,10 +151,10 @@ namespace chat_aps.Model
             {
 
                 // Pega o IP do primeiro dispostivo da rede
-                IPAddress ipaLocal = EnderecoIP;
+                IPAddress IpLocal = EnderecoIP;
 
                 // Cria um objeto TCP listener usando o IP do servidor e porta definidas
-                TlsCliente = new TcpListener(ipaLocal, 2502);
+                TlsCliente = new TcpListener(IpLocal, 2502);
 
                 // Inicia o TCP listener e escuta as conexões
                 TlsCliente.Start();
@@ -168,7 +168,7 @@ namespace chat_aps.Model
             }
             catch (Exception ex)
             {
-                throw ex;
+                Mensagem.MessageError(ex.Message);
             }
         }
 
