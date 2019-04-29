@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Fechar.cs" />
     <Compile Include="Model\Conexao.cs" />
+    <Compile Include="Model\Mensagem.cs" />
     <Compile Include="Model\MeuIP.cs" />
     <Compile Include="Model\Servidor.cs" />
     <Compile Include="Model\StatusChangedEventArgs.cs" />
