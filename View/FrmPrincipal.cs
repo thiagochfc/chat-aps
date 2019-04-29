@@ -1,4 +1,5 @@
-﻿using System;
+﻿using chat_aps.Model;
+using System;
 using System.Windows.Forms;
 
 namespace chat_aps.View
@@ -8,6 +9,11 @@ namespace chat_aps.View
         public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            Application.ApplicationExit += new EventHandler(Fechar.OnApplicationExit);
         }
 
         private void BtnEntrar_Click(object sender, EventArgs e)

@@ -17,6 +17,7 @@ namespace chat_aps.View
 
         private void FrmSala_Load(object sender, EventArgs e)
         {
+            Application.ApplicationExit += new EventHandler(Fechar.OnApplicationExit);
             // Avisa que o servidor está parado
             LblStatusMensagem.Text = "Parado";
             RbtIPAutomatico.Checked = true;

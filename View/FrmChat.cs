@@ -18,7 +18,11 @@ namespace chat_aps.View
 
         private void FrmChat_Load(object sender, System.EventArgs e)
         {
+            // Instância o objeto Cliente
             Cliente = new Cliente(this, TxtUsuario, TxtIP, TxtLog, TxtMensagem);
+            // Na saida da aplicação : desconectar
+            Application.ApplicationExit += new EventHandler(Cliente.OnApplicationExit);
+            Application.ApplicationExit += new EventHandler(Fechar.OnApplicationExit);
         }
 
         private void BtnEntrar_Click(object sender, System.EventArgs e)
@@ -47,10 +51,8 @@ namespace chat_aps.View
 
         private void TxtMensagem_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)13)
-            {
-                BtnEnviar_Click(this, new EventArgs());
-            }
+            if (e.KeyChar.Equals((char)13))
+                Cliente.EnviaMensagem();
         }
 
         private void ComponentesQuandoFechado()
@@ -60,16 +62,18 @@ namespace chat_aps.View
             BtnEntrar.Enabled = true;
             BtnSair.Enabled = false;
             PnlConteudo.Enabled = false;
-            TxtMensagem.Focus();
+            TxtUsuario.Focus();
         }
 
         private void ComponentesQuandoIniciado()
         {
+            TxtLog.Clear();
             TxtUsuario.Enabled = false;
             TxtIP.Enabled = false;
             BtnEntrar.Enabled = false;
             BtnSair.Enabled = true;
             PnlConteudo.Enabled = true;
+            TxtMensagem.Focus();
         }
 
         internal void IniciaConexaoPelaSala(string txtUsuario, string txtIP)

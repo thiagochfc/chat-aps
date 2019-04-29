@@ -127,6 +127,7 @@
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C\\ - Principal";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.PnlFundo.ResumeLayout(false);
             this.ResumeLayout(false);
 

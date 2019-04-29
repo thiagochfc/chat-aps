@@ -133,11 +133,10 @@
             // TxtMensagem
             // 
             this.TxtMensagem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMensagem.Location = new System.Drawing.Point(-1, 429);
+            this.TxtMensagem.Location = new System.Drawing.Point(-1, 432);
             this.TxtMensagem.MaxLength = 500;
-            this.TxtMensagem.Multiline = true;
             this.TxtMensagem.Name = "TxtMensagem";
-            this.TxtMensagem.Size = new System.Drawing.Size(506, 30);
+            this.TxtMensagem.Size = new System.Drawing.Size(506, 27);
             this.TxtMensagem.TabIndex = 1;
             this.TxtMensagem.WordWrap = false;
             this.TxtMensagem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMensagem_KeyPress);
@@ -376,7 +375,6 @@
         private System.Windows.Forms.Button BtnEntrar;
         private System.Windows.Forms.Panel PnlConteudo;
         private System.Windows.Forms.SplitContainer SpcConteudo;
-        private System.Windows.Forms.TextBox TxtLog;
         private System.Windows.Forms.Button BtnEnviar;
         private System.Windows.Forms.TextBox TxtMensagem;
         private System.Windows.Forms.SplitContainer SpcInformacao;
@@ -387,5 +385,6 @@
         private System.Windows.Forms.Label LblMeuIPMsg;
         private System.Windows.Forms.Label LblMeuIP;
         private System.Windows.Forms.Label LblInformacoes;
+        private System.Windows.Forms.TextBox TxtLog;
     }
 }
